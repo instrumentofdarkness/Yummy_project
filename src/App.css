@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+.navBar {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.home {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
