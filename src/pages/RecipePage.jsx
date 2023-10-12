@@ -21,6 +21,10 @@ export default function RecipePage() {
   return (
     <div>
       <h1>Recipe Page</h1>
+      <input type="text" placeholder="Search" />  
+      <button>Search</button>
+      <h2>Recipe</h2>
+      
       <div className="recipe-container">
         {recipe.map((recipe) => (
           <>
