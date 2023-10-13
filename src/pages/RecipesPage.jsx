@@ -2,16 +2,16 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const recipiesUrl = 'www.themealdb.com/api/json/v1/1/search.php?s=${userInput}';
+const recipiesUrl = "www.themealdb.com/api/json/v1/1/search.php?s=${userInput}";
 
-export default function RecipePage() {
-  const [recipe, setRecipe] = useState([]);
+export default function RecipesPage() {
+  const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     axios
       .get(recipiesUrl)
       .then((response) => {
-        setRecipe(response.data);
+        setRecipes(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -20,13 +20,12 @@ export default function RecipePage() {
 
   return (
     <div>
-      <h1>Recipe Page</h1>
-      <input type="text" placeholder="Search" />  
+      <h1>Recipes Page</h1>
+      <input type="text" placeholder="Search" />
       <button>Search</button>
-      <h2>Recipe</h2>
-      
+
       <div className="recipe-container">
-        {recipe.map((recipe) => (
+        {recipes.map((recipe) => (
           <>
             <div key={recipe.idMeal} className="recipe-card">
               <h3>{recipe.strMeal}</h3>
@@ -42,3 +41,8 @@ export default function RecipePage() {
     </div>
   );
 }
+
+// recipies
+// setUserInput
+// setFavRecipies
+// favRecipies

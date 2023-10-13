@@ -5,3 +5,5 @@ export default function FavouritesPage() {
     <div>FavouritesPage</div>
   )
 }
+
+// favRecipes
