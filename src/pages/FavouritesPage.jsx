@@ -1,9 +1,8 @@
 import React from 'react'
 
-export default function FavouritesPage() {
+export default function FavouritesPage({favRecipies}) {
   return (
     <div>FavouritesPage</div>
   )
 }
 
-// favRecipes
