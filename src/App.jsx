@@ -10,8 +10,8 @@ import FavouritesPage from "./pages/FavouritesPage";
 import ContactPage from "./pages/ContactPage";
 
 function App() {
-  const recipiesUrl =
-    "https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}";
+  const recipesUrl =
+    "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   const [isLoading, setIsLoading] = useState(true);
   const [recipes, setRecipes] = useState([]);
   const [userInput, setUserInput] = useState("");
@@ -19,11 +19,11 @@ function App() {
 
   function getRecipes() {
     axios
-      .get(recipiesUrl)
+      .get(recipesUrl)
       .then((response) => response.data)
-      .then((recipies) => {
+      .then((recipes) => {
         setIsLoading(false);
-        setRecipes(recipies);
+        setRecipes(recipes);
         setUserInput(userInput);
         setFavRecipes(favRecipes);
       })

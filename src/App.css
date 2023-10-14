@@ -3,13 +3,13 @@
 }
 
 .navBar {
-  background-color: #282c34;
+  background-color: lightgray;
   min-height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: black;
 }
 
 .home {

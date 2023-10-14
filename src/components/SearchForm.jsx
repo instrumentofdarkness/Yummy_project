@@ -1,9 +1,28 @@
-import React from 'react'
+import React from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
-export default function searchForm({setUserInput}) {
+export default function searchForm({ setUserInput }) {
+  function handleSearch(event) {
+    setUserInput(event.target.value);
+  }
   return (
-    <div>searchForm</div>
-  )
+    <div>
+      <Box
+        component="form"
+        sx={{
+          "& > :not(style)": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          id="outlined-basic"
+          label="Search"
+          variant="outlined"
+          onChange={handleSearch}
+        />
+      </Box>
+    </div>
+  );
 }
- 
-
