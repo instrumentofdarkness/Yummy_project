@@ -2,6 +2,9 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
@@ -34,7 +37,11 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <Box sx={{ display: 'flex' }}>
+        <CircularProgress />
+      </Box>
+    );
   } else {
     return (
       <div className="App">

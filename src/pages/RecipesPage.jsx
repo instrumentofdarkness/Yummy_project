@@ -1,13 +1,12 @@
 import RecipiesList from "../components/RecipesList";
 
-export default function RecipesPage({ recipies, setUserInput, setFavRecipies}) {
+export default function RecipesPage({ recipes, setUserInput, setFavRecipies }) {
   return (
     <div>
       Recipes Page
-      <RecipiesList recipies={recipies} />
+      <RecipiesList recipes={recipes} />
     </div>
   );
 }
-
 
 // favRecipies
