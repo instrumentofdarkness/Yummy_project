@@ -26,7 +26,7 @@ function App() {
       .then((response) => response.data)
       .then((recipes) => {
         setIsLoading(false);
-        setRecipes(recipes);
+        setRecipes(recipes.meals);
         setUserInput(userInput);
         setFavRecipes(favRecipes);
       })
