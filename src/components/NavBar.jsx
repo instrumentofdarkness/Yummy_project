@@ -4,8 +4,7 @@ import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 
-import logo from "../../assets/chef.png";
-
+import logo from "../assets/chef.png";
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -8,
