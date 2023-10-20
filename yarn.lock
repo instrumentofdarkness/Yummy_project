@@ -1394,6 +1394,11 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.6.tgz#22958c042e10b67463997bd6ea7115fe28cbcaf9"
   integrity sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==
 
+"@fontsource/rajdhani@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/rajdhani/-/rajdhani-5.0.8.tgz#15557a0d306bb1a842e1cedc3e4b8721427c3298"
+  integrity sha512-icfbeazLFF6HjUPxiZo0/LZ1t3eY3eec8JASKffssLP2pQJXMgDr/7sLXrRbctcUy64sK064ibJ1zplXNTei0g==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"

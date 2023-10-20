@@ -10,6 +10,10 @@
   align-items: center;
   justify-content: space-between;
   color: black;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 60px;
 }
 
 .home {
