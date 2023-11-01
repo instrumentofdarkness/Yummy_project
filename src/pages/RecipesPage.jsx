@@ -1,14 +1,15 @@
 import RecipiesList from "../components/RecipesList";
 import SearchForm from "../components/searchForm";
 
-export default function RecipesPage({ recipes, setUserInput, setFavRecipies }) {
+
+export default function RecipesPage({ recipes, setUserInput, setFavRecipes }) {
   return (
     <div>
-      <SearchForm setUserInput={setUserInput} setFavRecipies={setFavRecipies} />
+      <SearchForm setUserInput={setUserInput} setFavRecipes={setFavRecipes} />
 
-      <RecipiesList recipes={recipes} />
+      <RecipiesList recipes={recipes} setFavRecipes={setFavRecipes} favRecipes={favRecipes}/>
     </div>
   );
 }
 
-// favRecipies
+// favRecipes

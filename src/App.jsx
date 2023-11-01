@@ -12,15 +12,15 @@ import FavouritesPage from "./pages/FavouritesPage";
 import ContactPage from "./pages/ContactPage";
 
 function App() {
-  const recipesUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   const [isLoading, setIsLoading] = useState(true);
   const [recipes, setRecipes] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [favRecipes, setFavRecipes] = useState([]);
+  let recipesUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`;
 
-  function getRecipes() {
+  function getRecipes(url) {
     axios
-      .get(recipesUrl)
+      .get(url)
       .then((response) => response.data)
       .then((recipes) => {
         setIsLoading(false);
@@ -31,8 +31,8 @@ function App() {
       .catch((error) => console.log(error));
   }
   useEffect(() => {
-    getRecipes();
-  }, []);
+    getRecipes(recipesUrl);
+  }, [recipesUrl]);
 
   if (isLoading) {
     return (
@@ -49,16 +49,14 @@ function App() {
     );
   } else {
     return (
-      
       <div className="App">
-        
         <NavBar />
         <Routes>
           <Route path="/homePage" element={<HomePage />} />
           <Route
             path="/recipes"
             element={
-              <RecipesPage recipes={recipes} setUserInput={setUserInput} />
+              <RecipesPage recipes={recipes} setUserInput={setUserInput} setFavRecipes={setFavRecipes} favRecipes={favRecipes} />
             }
           />
           <Route

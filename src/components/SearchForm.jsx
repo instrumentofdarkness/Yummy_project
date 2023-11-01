@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 
 export default function userInput({ setUserInput }) {
   function handleSearch(event) {
+    event.preventDefault();
     setUserInput(event.target.value);
   }
   return (
