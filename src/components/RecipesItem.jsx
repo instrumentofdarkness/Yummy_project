@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function RecipesItem({ recipes, setFavRecipes, favRecipes }) {
+  
+  function addFavHandler () {setFavRecipes([...favRecipes, recipes]);}
   return (
     <div>
       <h1>
@@ -8,16 +10,11 @@ export default function RecipesItem({ recipes, setFavRecipes, favRecipes }) {
         <span> </span>
         <button
           name="fav"
-          onClick={() => {
-            setFavRecipes([...favRecipes, recipes]);
-          }}
+          onClick={addFavHandler}
         >
           Add to Favourites
         </button>
-        {/* const handleAddToFav = (recipe) => {
-        let newFav = fav.push(recipe);
-          setFav(newFav);
-        }; */}
+             
       </h1>
       <img src={recipes.strMealThumb} alt={recipes.strMeal} />
       <p>{recipes.strCategory}</p>

@@ -15,7 +15,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-export default function NavBar() {
+export default function NavBar({favRecipes}) {
+  const favCount = favRecipes.length
   return (
     <div className="navBar">
       <div className="logo">
@@ -23,10 +24,14 @@ export default function NavBar() {
       </div>
       <Link to="/homePage">Home</Link>
       <Link to="/recipes">Recipes</Link>
-      <Link to="/favouritesPage">Favourites</Link>
+      
+      <Badge badgeContent={favCount} color="primary">
+      <Link to="/favouritesPage">Favourites
+       </Link>
+    </Badge>
       <Link to="/contactPage">Contact</Link>
     </div>
   );
 }
 
-// favRecipes
+

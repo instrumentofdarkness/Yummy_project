@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-export default function userInput({ setUserInput }) {
+export default function UserInput({ setUserInput }) {
   function handleSearch(event) {
     event.preventDefault();
     setUserInput(event.target.value);

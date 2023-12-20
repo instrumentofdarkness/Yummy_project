@@ -1,5 +1,5 @@
 import RecipiesList from "../components/RecipesList";
-import SearchForm from "../components/searchForm";
+import UserInput from "../components/UserInput";
 
 export default function RecipesPage({
   recipes,
@@ -9,7 +9,7 @@ export default function RecipesPage({
 }) {
   return (
     <div>
-      <SearchForm setUserInput={setUserInput} setFavRecipes={setFavRecipes} />
+      <UserInput setUserInput={setUserInput} setFavRecipes={setFavRecipes} />
       <RecipiesList
         recipes={recipes}
         setFavRecipes={setFavRecipes}

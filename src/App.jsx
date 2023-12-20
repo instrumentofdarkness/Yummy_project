@@ -25,15 +25,14 @@ function App() {
       .then((recipes) => {
         setIsLoading(false);
         setRecipes(recipes.meals);
-        setUserInput(userInput);
-        setFavRecipes(favRecipes);
       })
       .catch((error) => console.log(error));
   }
   useEffect(() => {
     getRecipes(recipesUrl);
   }, [recipesUrl]);
-
+  console.log(favRecipes, "favRecipes");
+  console.log(userInput, "userInput");
   if (isLoading) {
     return (
       <Box
@@ -50,20 +49,25 @@ function App() {
   } else {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar favRecipes={favRecipes} />
         <Routes>
-          <Route path="/homePage" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route
             path="/recipes"
             element={
-              <RecipesPage recipes={recipes} setUserInput={setUserInput} setFavRecipes={setFavRecipes} favRecipes={favRecipes} />
+              <RecipesPage
+                recipes={recipes}
+                setUserInput={setUserInput}
+                setFavRecipes={setFavRecipes}
+                favRecipes={favRecipes}
+              />
             }
           />
           <Route
-            path="/favouritesPage"
+            path="/favourites"
             element={<FavouritesPage favRecipes={favRecipes} />}
           />
-          <Route path="/contactPage" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     );
